@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="col">
+    <h2>Lista de Productos</h2>
+    <ul class="list-group">
+
+        {% for product in product_list %}
+        <li class="list-group-item">
+            {{ product.name }}
+            <span class="text-success">${{ product.price }}</span>
+        </li>
+        {% endfor %}
+
+    </ul>
+</div>
+{% endblock%}
