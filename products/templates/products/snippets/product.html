@@ -1,0 +1,11 @@
+<div class="card h-20">
+    {% if product.image %}
+        <img class="mt-4" src="{{ product.image.url }}" alt="{{ product.name }}" width="250" height="250">
+    {% endif %}
+    <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text">Marca: {{ product.brand }}</p>
+        <p class="card-text">{{ product.description |truncatechars:50 }}</p>
+        <a href="{% url 'products:product' product.slug %}" class="btn btn-primary">Ver Mas</a>
+    </div>
+</div>

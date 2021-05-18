@@ -1,0 +1,16 @@
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "name": "Guitarra Stratocaster",
+        "brand": 1,
+        "description": "ndwmklwmdowsmdkxmskldmklwmdwsd",
+        "price": "15000.00",
+        "stock": 5,
+        "slug": "guitarra-stratocaster",
+        "image": "products/strato_88uLslm.jpg",
+        "created_at": "2021-05-18T16:06:03.233Z"
+    }
+}
+]
