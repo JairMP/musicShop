@@ -1,10 +1,86 @@
 {% extends 'base.html' %}
 {% block content%}
-<div class="col">
-    <h4 class="text-center">Lista de Productos</h2>
-        {% include 'products/snippets/search.html'%}
-        <div class="row">
-            {% include 'products/snippets/list.html'%}
-        </div>
-</div>
-{% endblock%}
+
+{% include 'carousel.html' %}
+
+<!--Main layout-->
+<main>
+  <div class="container">
+
+    {% include 'products/snippets/search.html'%}
+
+    <!--Section: Products v.3-->
+    <section class="text-center mb-4">
+      <h2 class="mb-4 mt-5">Nuevos Productos</h2>
+
+      <!--Grid row-->
+      <h4 style="text-align: left;">Guitarras</h4>
+      <hr>
+      <div class="row wow fadeIn">
+
+        {% include 'products/snippets/list.html'%}
+
+      </div>
+      <h4 style="text-align: left;">Bajos</h4>
+      <hr>
+      <div class="row wow fadeIn">
+
+        {% include 'products/snippets/list.html'%}
+
+      </div>
+
+      <h4 style="text-align: left;">Accesorios</h4>
+      <hr>
+      <div class="row wow fadeIn">
+
+        {% include 'products/snippets/list.html'%}
+
+      </div>
+
+    </section>
+    <!--Section: Products v.3-->
+
+    <!--Pagination-->
+    <nav class="d-flex justify-content-center wow fadeIn">
+      <ul class="pagination pg-blue">
+
+        <!--Arrow left-->
+        <li class="page-item disabled">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+
+        <li class="page-item active">
+          <a class="page-link" href="#">1
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">4</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">5</a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--Pagination-->
+
+  </div>
+</main>
+<!--Main layout-->
+{% endblock %}

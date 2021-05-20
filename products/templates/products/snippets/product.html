@@ -1,11 +1,48 @@
-<div class="card h-20">
-    {% if product.image %}
-        <img class="mt-4" src="{{ product.image.url }}" alt="{{ product.name }}" width="250" height="250">
-    {% endif %}
-    <div class="card-body">
-        <h5 class="card-title">{{ product.name }}</h5>
-        <p class="card-text">Marca: {{ product.brand }}</p>
-        <p class="card-text">{{ product.description |truncatechars:50 }}</p>
-        <a href="{% url 'products:product' product.slug %}" class="btn btn-primary">Ver Mas</a>
+ <!--Grid column-->
+ <div class="col-lg-3 col-md-6 mb-4">
+
+    <!--Card-->
+    <div class="card h-100 w-200">
+
+      <!--Card image-->
+      <div class="view overlay">
+        {% if product.image %} 
+        <img src="{{ product.image.url }}" class="card-img-top"
+          alt="" width="200" height="250">
+        {% endif %}
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      <!--Card image-->
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Category & Title-->
+        <a href="" class="grey-text">
+          <h5>{{ product.brand }}</h5>
+        </a>
+        <h5>
+          <strong>
+            <a href="" class="dark-grey-text">{{ product.name }}</a>
+          </strong>
+        </h5>
+
+        <h4 class="font-weight-bold blue-text">
+          <strong>${{ product.price }}</strong>
+        </h4>
+        <a href="{% url 'products:product' product.slug %}">
+          <button class="btn btn-primary btn-md my-0 p" type="submit">Ver Mas
+            <i class="fas fa-shopping-cart ml-1"></i>
+          </button>
+        </a>
+        
+
+      </div>
+      <!--Card content-->
+
     </div>
-</div>
+    <!--Card-->
+
+  </div>
+  <!--Grid column-->

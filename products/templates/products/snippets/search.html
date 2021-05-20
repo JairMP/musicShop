@@ -1,8 +1,12 @@
-<form action="{% url 'products:search' %}">
-    <div class="input-group">
-        <input type="text" name="q" value="{{ search }}" class="form-control" placeholder="Buscar">
-        <div class="input-group-append">
-            <input type="submit" name="" id="" value="Buscar" class="btn btn-primary">
-        </div>
-    </div>
-</form>
+<div class="card mt-4 mb-4">
+  <div class="card-body">
+    <form action="{% url 'products:search' %}">
+      <div class="input-group">
+        <input id="msg" type="text" class="form-control" value="{{search}}" name="q" placeholder="Buscador">
+        <button class="btn btn-primary btn-md my-0 p" type="submit">Buscar
+          <i class="fas fa-shopping-cart ml-1"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
